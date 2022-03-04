@@ -8,3 +8,29 @@ Content-Type: application/json
 ###
 
 GET https://localhost:3000/api/test
+
+
+###
+POST http://localhost:3000/api/habit
+Content-Type: application/json
+
+{
+    "name": "Eat Pizza",
+    "goal": 3,
+    "isPositive": "false",
+    "color": "red",
+    "state": {
+        "checkRate": 0,
+        "lastUsed": "2022-03-03T03:25:33.254Z",
+        "isCompleted": "false",
+    }
+}
+
+###
+POST http://localhost:3000/api/user
+Content-Type: application/json
+
+{
+    "name": "Nate",
+    "email": "nateduncan0@gmail.com",
+    "password": "password"
