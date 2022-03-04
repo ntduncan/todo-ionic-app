@@ -1,5 +1,7 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { Redirect, Route } from 'react-router-dom';
 import ExploreContainer from '../components/ExploreContainer';
+import HabitDetail from '../components/Habits/HabitDetail';
 import HabitList from '../components/Habits/HabitList'
 import './Tab1.css';
 
@@ -18,6 +20,9 @@ const Tab1: React.FC = () => {
           </IonToolbar>
         </IonHeader>
         <HabitList name ='Jordan'/>
+        <Route path="/tab1/detail">
+            <p>Details!</p>
+          </Route>
         <ExploreContainer name="Tab 1 page" />
       </IonContent>
     </IonPage>
