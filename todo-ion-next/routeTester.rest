@@ -1,32 +1,58 @@
-POST http://localhost:3000/api/test
-Content-Type: application/json
+####################################
+# Habit Routes
+####################################
 
-{
-    "test": "Test"
-}
-
-###
-
-GET https://localhost:3000/api/test
+### Get all habits
+GET http://localhost:3000/api/habit
 
 
-###
+### Create a new habit
 POST http://localhost:3000/api/habit
 Content-Type: application/json
 
 {
     "name": "Eat Pizza",
     "goal": 3,
-    "isPositive": "false",
+    "isPositive": false,
     "color": "red",
     "state": {
         "checkRate": 0,
         "lastUsed": "2022-03-03T03:25:33.254Z",
-        "isCompleted": "false",
+        "isComplete": false
     }
 }
 
-###
+### Delete a habit by ID
+DELETE http://localhost:3000/api/habit
+Content-Type: application/json
+
+{
+    "id": "62219660e5488657ce135235"
+}
+
+### Update and existing habits
+PATCH http://localhost:3000/api/habit
+Content-Type: application/json
+
+{
+    "id": "62219b3403eb1c1d5fc2e469",
+    "name": "backflip",
+    "goal": 7,
+    "isPositive": true,
+    "color": "blue",
+    "state": {
+        "checkRate": 0,
+        "lastUsed": "2022-03-03T03:25:33.254Z",
+        "isComplete": false
+    }
+}
+
+
+####################################
+# User Routes
+####################################
+
+### Create A user Route
 POST http://localhost:3000/api/user
 Content-Type: application/json
 
