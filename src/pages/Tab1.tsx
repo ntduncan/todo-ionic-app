@@ -20,9 +20,6 @@ const Tab1: React.FC = () => {
           </IonToolbar>
         </IonHeader>
         <HabitList name ='Jordan'/>
-        <Route path="/tab1/detail">
-            <p>Details!</p>
-          </Route>
         <ExploreContainer name="Tab 1 page" />
       </IonContent>
     </IonPage>

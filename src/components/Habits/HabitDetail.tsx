@@ -11,7 +11,9 @@ const HabitDetail: React.FC<ContainerProps> = ({ detail }) => {
       <IonContent>
         <IonCard>
             <IonItem>
+              <p>ASDASDWDADQAW</p>
                 <h1>{detail?.name}</h1>
+
             </IonItem>
         </IonCard>
     </IonContent>
