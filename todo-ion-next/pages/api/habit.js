@@ -38,7 +38,7 @@ const handler = async (req, res, next) => {
       Habit.find()
       .then(habits => {
         console.log(habits);
-        res.json(catches);
+        res.json(habits);
       })
       .catch(err => {
         const error = new Error(err);
@@ -53,7 +53,7 @@ const handler = async (req, res, next) => {
       const habitId = req.id;
       console.log(habitId);
       let deleteQuery = { _id: habitId };
-      Habit.findById(habitId).then((doc) => {
+      await Habit.findById(habitId).then((doc) => {
          if (doc == null) {
            console.log(habitId)
             res.json({ message: "Habit was not found." });
